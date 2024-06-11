@@ -1,9 +1,11 @@
 .project-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 16px;
+  background-color: rgb(175, 200, 204);
 }
 
 .loader-container {
@@ -41,7 +43,7 @@
 
 .transaction-container {
   width: 80%;
-  background-color: rgb(146, 207, 231);
+  background-color: rgb(176, 209, 214);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 40px -20px 1px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 .header-text {
@@ -71,28 +74,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .input-search {
-  font-family: "Roboto";
+  font-family: sans-serif;
   background-color: #f8df8c;
   color: #474642;
-  font-size: 18px;
-  padding: 8px 18px;
+  font-size: 16px;
+  padding: 8px 10px;
   border-radius: 8px;
   outline: none;
   border: none;
 }
 
 .select-month {
-  font-family: "Roboto";
-  font-size: 18px;
+  font-family: sans-serif;
+  font-size: 16px;
   background-color: #ebb840;
   border-radius: 8px;
-  padding: 8px 18px;
+  padding: 8px 10px;
   outline: none;
   border: none;
 }
@@ -124,4 +128,96 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .transaction-container {
+    width: 100%;
+  }
+  .barChart-container, .pieChart-container, .statistics-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1200px) {
+  .transaction-container, .barChart-container, .pieChart-container, .statistics-container {
+    width: 80%;
+    margin: 48px auto;
+  }
+}
+
+/* Add hover effect to buttons */
+
+
+/* Add hover effect to buttons */
+.failure-button {
+  font-family: "Roboto";
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px;
+  background-color: aqua;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.failure-button:hover {
+  background-color: #6c757d; /* Change to a darker shade on hover */
+}
+
+/* Add box shadow to containers */
+.transaction-container,
+.barChart-container,
+.pieChart-container,
+.statistics-container {
+  width: 80%;
+  margin: 48px auto;
+  background-color: rgb(148, 216, 228);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.transaction-container:hover,
+.barChart-container:hover,
+.pieChart-container:hover,
+.statistics-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Add focus/blur effect to input fields */
+.input-search,
+.select-month {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #f8df8c;
+  color: #474642;
+  padding: 8px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  transition: box-shadow 0.3s ease; /* Add transition effect */
+  cursor: pointer;
+}
+
+.input-search:focus,
+.select-month:focus {
+  box-shadow: 0 0 5px rgba(24, 24, 24, 0.964); /* Add shadow on focus */
+}
+
+.input-search:not(:focus),
+.select-month:not(:focus) {
+  box-shadow: none; /* Remove shadow on blur */
 }

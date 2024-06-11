@@ -33,22 +33,25 @@ const Statistics = (props) => {
           ))}
         </select>
       </div>
-      <table>
-        <tbody>
-          <tr>
-            <td>Total sale</td>
-            <td>{Math.round(total_sale_amt * 100) / 100}</td>
-          </tr>
-          <tr>
-            <td>Total sold item</td>
-            <td>{Total_sold_items}</td>
-          </tr>
-          <tr>
-            <td>Total not sold item</td>
-            <td>{Total_unSold_items}</td>
-          </tr>
-        </tbody>
-      </table>
+      <table style={{ border: "none", maxHeight: "600px", maxWidth: "400px", borderRadius: "20px", padding: "10px" }}>
+  <tbody>
+    <tr>
+      <td style={{ border: "none", padding: "10px 20px" }}>Total sale</td>
+      <td style={{ border: "none", padding: "10px 20px" }}>{Math.round(total_sale_amt * 100) / 100}</td>
+    </tr>
+    <tr>
+      <td style={{ border: "none", padding: "10px 20px" }}>Total sold item</td>
+      <td style={{ border: "none", padding: "10px 20px" }}>{Total_sold_items}</td>
+    </tr>
+    <tr>
+      <td style={{ border: "none", padding: "10px 20px" }}>Total not sold item</td>
+      <td style={{ border: "none", padding: "10px 20px" }}>{Total_unSold_items}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
     </div>
   );
 };

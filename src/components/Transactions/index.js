@@ -46,7 +46,7 @@ const Transactions = (props) => {
           </tbody>
         </table>
         <div className="pagination-container">
-          <p>Page No: {page}</p>
+          <p className="text">Page No: {page}</p>
           <div>
             <button type="button" onClick={decrementPage} disabled={page === 1}>
               Previous
@@ -60,7 +60,7 @@ const Transactions = (props) => {
               Next
             </button>
           </div>
-          <p>Per Page: 10</p>
+          <p className="text">Per Page: 10</p>
         </div>
       </>
     );

@@ -1,18 +1,22 @@
 .statistics-container {
-    width: 50%;
-    margin: 48px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    align-self: center;
   }
   .statistics-header-container {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
   }
   .statistics-header {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
     color: #000000;
     margin-right: 32px;
   }
+
+  

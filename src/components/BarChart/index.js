@@ -1,9 +1,9 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
-
 import "./index.css";
 
 const BarChartTask = (props) => {
   const { barChartData, selectMonth, months, changeMonth } = props;
+
   const changeMonthText = (event) => {
     changeMonth(event);
   };
@@ -29,17 +29,18 @@ const BarChartTask = (props) => {
         </select>
       </div>
       <BarChart
-        width={900}
-        height={400}
+        width={700}
+        height={300}
         data={barChartData}
         margin={{
           top: 5,
+          bottom:10,
         }}
       >
-        <XAxis dataKey="priceRange" />
+        <XAxis dataKey="priceRange" tick={{ angle: -23 }} interval={0}/>
         <YAxis dataKey="totalItems" />
         <Tooltip />
-        <Bar dataKey="totalItems" fill="#6ce5e8" />
+        <Bar dataKey="totalItems" fill="#000000" />
       </BarChart>
     </div>
   );

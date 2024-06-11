@@ -10,11 +10,21 @@
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+   
   }
   .pieChart-header {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     font-family: "Roboto";
     color: #000000;
     margin-right: 32px;
+    font-family: sans-serif;
+
+  }
+
+  .recharts-surface{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }

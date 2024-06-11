@@ -7,17 +7,16 @@ const PieChartTask = (props) => {
   const changeMonthText = (event) => {
     changeMonth(event);
   };
-  const getRandomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
+
+
+  const RectangleIcon = ({ width, height }) => (
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+      <rect width={width} height={height} fill="#6ce5e8" />
+    </svg>
+  );
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF", "#FF1919", "#FF6347"];
 
   // Generate an array of random colors based on the number of data points
-  const colors = pieChartData.map(() => getRandomColor());
   return (
     <div className="pieChart-container">
       <div className="pieChart-header-container">
@@ -53,15 +52,18 @@ const PieChartTask = (props) => {
           ))}
         </Pie>
         <Legend
-          iconType="circle"
-          layout="horizontal"
-          verticalAlign="bottom"
-          align="center"
-          wrapperStyle={{
-            fontSize: 16,
-            fontFamily: "Roboto",
-          }}
-        />
+  iconType="circle"
+  layout="horizontal"
+  verticalAlign="bottom"
+  align="center"
+  wrapperStyle={{
+    fontSize: 16,
+    fontFamily: "sans-serif",
+  }}
+  iconSize={20} // Adjust the size of the legend icon
+  icon={<RectangleIcon width={500} height={5} />} // Custom rectangle icon
+/>
+
       </PieChart>
     </div>
   );

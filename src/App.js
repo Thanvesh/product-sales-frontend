@@ -46,7 +46,7 @@ class App extends Component {
       apiStatus: apiStatusConstants.inProgress,
     });
     const offset = (page - 1) * limit;
-    const apiUrl = `http://localhost:3000/transactions-charts?selectedMonth=${selectedMonth}&searchText=${searchText}&limit=${limit}&offset=${offset}`;
+    const apiUrl = `https://product-sales.onrender.com/transactions-charts?selectedMonth=${selectedMonth}&searchText=${searchText}&limit=${limit}&offset=${offset}`;
     const response = await fetch(apiUrl);
     if (response.ok) {
       const data = await response.json();
